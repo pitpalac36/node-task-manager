@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^6.3.1",
+    "@sendgrid/mail": "^7.2.3",
     "@szmarczak/http-timer": "^1.1.2",
     "bcryptjs": "^2.4.3",
     "env-cmd": "^10.1.0",
