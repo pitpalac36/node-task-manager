@@ -17,7 +17,6 @@ router.post('/users/login', async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
         res.status(400).send()
     }
 })
@@ -57,13 +56,11 @@ router.post('/users', async (req, res) => {
         */
         sendWelcomeEmail(user.email)
         const token = await user.generateAuthToken()
-        console.log(user)
         res.status(201).send({
             user,
             token
         })   // 201 - Created
     } catch (error) {
-        console.log(error)
         res.status(400).send(error)
     }
 })
@@ -117,7 +114,6 @@ router.get('/users/:id/avatar', async (req, res) => {
         res.set('Content-Type', 'image/png')
         res.send(user.avatar)
     } catch (error) {
-        console.log(error)
         res.status(404).send()
     }
 })
@@ -154,7 +150,6 @@ router.delete('/users/me', auth, async (req, res) => {
         sendCancelationEmail(req.user.email, req.user.name)
         res.send(req.user)
     } catch (error) {
-        console.log(error)
         res.status(500).send()
     }
 })

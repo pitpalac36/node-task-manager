@@ -1,0 +1,10 @@
+
+
+module.exports = {
+    setApiKey() {
+
+    },
+    send() {
+        
+    }
+}
